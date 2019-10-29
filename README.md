@@ -6,7 +6,7 @@ The goal of this workshop is to give users a hands on experience building CloudF
 
 ### Workshop Setup
 
-Workshop accounts have already been created for you. Simply log into them and start the labs. You can feel free to run commands from anywhere, but a Cloud9 instance has been created for your convenience.
+Workshop accounts have already been created for you. Simply log into them and start the labs. You can feel free to run commands from anywhere, but a Cloud9 instance will be created for your convenience.
 
 Use the accounts previously provided to you. Sign in at https://acctnum.signin.aws.amazon.com/.
 
@@ -14,20 +14,25 @@ Click on the **Deploy to AWS** icon below to region to stand up the core worksho
 
 Region | Launch Template
 ------------ | -------------  
-**N. Virginia** (us-east-1) | [![Launch Stack into Oregon with CloudFormation](images/deploy-to-aws.png)](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=aws-simple-lab&templateURL=https://s3-us-west-2.amazonaws.com/immersionday.hubertcheung.com/aws-simple-lab-createvpc.yml)  
+**N. Virginia** (us-east-1) | [![Launch Stack into N. Virginia with CloudFormation](images/deploy-to-aws.png)](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=aws-simple-lab&templateURL=https://s3-us-west-2.amazonaws.com/immersionday.hubertcheung.com/aws-simple-lab-createvpc.yml)  
 <!-- **Ireland** (eu-west-1) | [![Launch Stack into Ireland with CloudFormation](images/deploy-to-aws.png)](https://console.aws.amazon.com/cloudformation/home?region=eu-west-1#/stacks/new?stackName=cfn-workshop&templateURL=https://s3-us-west-2.amazonaws.com/immersionday.hubertcheung.com/createVPC.yml)  
 **Oregon** (us-west-2) | [![Launch Stack into Oregon with CloudFormation](images/deploy-to-aws.png)](https://console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/new?stackName=cfn-workshop&templateURL=https://s3-us-west-2.amazonaws.com/immersionday.hubertcheung.com/createVPC.yml)  -->
 
 Once you click the button above, you should be taken to the AWS CloudFormation console. Keep clicking **Next** until your stack starts creating.
 
-![CFN 1](images/cfn-1.png)
-![CFN final](images/cfn-5.png)
+Click **Next**
 
-Eventually, you'll see 2 stacks and a **CREATE_COMPLETE**:
+![CFN 1](images/cfn-1.png)
+
+Leave the name as **aws-simple-lab**, click **Next**
+
+![CFN final](images/cfn-2.png)
+
+Keep clicking **Next** until you get to **Create Stack**, then click **Create Stack**. Eventually, you'll see 2 stacks and a **CREATE_COMPLETE**:
 
 ![CFN COMPLETE](images/cfn-complete.png)
 
-
+Once you see that everything is in a **CREATE_COMPLETE** state, move on to the next step
 
 ### Familiarize yourself with the workshop environment
 
