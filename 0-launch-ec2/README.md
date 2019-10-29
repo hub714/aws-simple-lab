@@ -126,4 +126,4 @@ Warning: Permanently added 'ec2-3-88-148-113.compute-1.amazonaws.com,10.0.1.151'
 
 ### Checkpoint
 
-At this point, you should be able to hit your instance and log in. But now we have to make sure the VPC is actually deployed correctly. 
+At this point, you should be able to hit your instance and log in. Let's work on adding S3 now [Click here to keep going](../1-access-s3)
