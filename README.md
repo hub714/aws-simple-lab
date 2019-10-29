@@ -14,9 +14,10 @@ Click on the **Deploy to AWS** icon below to region to stand up the core worksho
 
 Region | Launch Template
 ------------ | -------------  
+**N. Virginia** (us-east-1) | [![Launch Stack into Oregon with CloudFormation](images/deploy-to-aws.png)](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=vpc-workshop&templateURL=https://s3-us-west-2.amazonaws.com/immersionday.hubertcheung.com/createVPC.yml)  
 <!-- **Ireland** (eu-west-1) | [![Launch Stack into Ireland with CloudFormation](images/deploy-to-aws.png)](https://console.aws.amazon.com/cloudformation/home?region=eu-west-1#/stacks/new?stackName=cfn-workshop&templateURL=https://s3-us-west-2.amazonaws.com/immersionday.hubertcheung.com/createVPC.yml)  
 **Oregon** (us-west-2) | [![Launch Stack into Oregon with CloudFormation](images/deploy-to-aws.png)](https://console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/new?stackName=cfn-workshop&templateURL=https://s3-us-west-2.amazonaws.com/immersionday.hubertcheung.com/createVPC.yml)  -->
-**N. Virginia** (us-east-1) | [![Launch Stack into Oregon with CloudFormation](images/deploy-to-aws.png)](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=cfn-workshop&templateURL=https://s3-us-west-2.amazonaws.com/immersionday.hubertcheung.com/createVPC.yml)  
+
 
 
 
@@ -43,7 +44,7 @@ On the bottom, you will see a bash shell (Yellow). For the remainder of the lab,
 There are a number of files and startup scripts we have pre-created for you. They're all in the main repo that you're using, so we'll clone that locally. Run this:
 
 <pre>
-$ git clone https://github.com/hub714/aws-demos.git
+$ git clone https://github.com/hub714/ec2-vpc-s3-lab.git
 </pre>
 
 2\. Configure the AWS Command Line Interface (CLI)
@@ -51,18 +52,16 @@ $ git clone https://github.com/hub714/aws-demos.git
 As we'll be using the AWS CLI for this lab, let's configure it first. Cloud9 will automatically configure credentials for you, so what we're looking to do is configure the region.
 
 <pre>
-$ aws configure
+$ aws configure list
+      Name                    Value             Type    Location
+      ----                    -----             ----    --------
+   profile                <not set>             None    None
+access_key     ****************ABCD shared-credentials-file
+secret_key     ****************HffI shared-credentials-file
+    region                us-east-1      config-file    ~/.aws/config
 </pre>
 
-Don't change anything and hit enter 2 times until you see **Default region name [eu-west-1]**. Ensure it says eu-west-1. If it doesn't, type in **eu-west-1**. Hit enter 2 more times. In the end, your console should look like this:
-
-<pre>
-$ aws configure
-AWS Access Key ID [****************5NHJ]: 
-AWS Secret Access Key [****************Ar06]: 
-Default region name [eu-west-1]: 
-Default output format [None]: 
-</pre>
+You should see a region value of **us-east-1**. If this is not the case, ask your instructor to take a look.
 
 Now test the CLI:
 
