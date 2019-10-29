@@ -1,7 +1,7 @@
 ---
 AWSTemplateFormatVersion: '2010-09-09'
 
-Description: Create Environment for CFN Workshop
+Description: Create Environment for AWS Simple Lab
 
 Mappings:
   SubnetConfig:
@@ -182,7 +182,7 @@ Resources:
   InstanceSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
-      GroupName: cfn-workshop
+      GroupName: aws-simple-lab
       GroupDescription: Allow SSH Access
       VpcId: !Ref VPC
       SecurityGroupIngress:
