@@ -1,5 +1,5 @@
-# CloudFormation Workshop
-## Build your first web app with CloudFormation
+# AWS Simple Lab
+## Build your first web app with AWS
 
 ## Summary
 The goal of this workshop is to give users a hands on experience building CloudFormation templates. Ultimately, when all is done, users will have a working website on AWS. 

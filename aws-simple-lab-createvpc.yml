@@ -152,6 +152,8 @@ Resources:
         Value: !Ref AWS::StackName
       - Key: Network
         Value: Public
+      - Key: Name
+        Value: PublicRouteTable 
         
   PublicRoute:
     Type: AWS::EC2::Route
@@ -170,6 +172,8 @@ Resources:
         Value: !Ref AWS::StackName
       - Key: Network
         Value: Private
+      - Key: Name
+        Value: PrivateRouteTable      
         
   PrivateRoute:
     Type: AWS::EC2::Route

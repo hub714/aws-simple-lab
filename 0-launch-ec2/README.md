@@ -96,7 +96,10 @@ Check the subnet your instance is in and look at the route tables. What's requir
 
 <details>
 <summary>FINAL HINT</summary>
-Does the route table show a route to an IGW for 0.0.0.0/0? It doesn't. Choose a different route table to associate with the subnet. One of them will have the 0.0.0.0/0 route.
+Does the route table associated with the subnet show a route to an IGW for 0.0.0.0/0? It doesn't. Choose a different route table to associate with the subnet. One of them will have the 0.0.0.0/0 route.
+
+![Route Table Association](images/isitassociated.png)
+
 </details>
 
 5\. Test connectivity again
