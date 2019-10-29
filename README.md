@@ -18,6 +18,14 @@ Region | Launch Template
 <!-- **Ireland** (eu-west-1) | [![Launch Stack into Ireland with CloudFormation](images/deploy-to-aws.png)](https://console.aws.amazon.com/cloudformation/home?region=eu-west-1#/stacks/new?stackName=cfn-workshop&templateURL=https://s3-us-west-2.amazonaws.com/immersionday.hubertcheung.com/createVPC.yml)  
 **Oregon** (us-west-2) | [![Launch Stack into Oregon with CloudFormation](images/deploy-to-aws.png)](https://console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/new?stackName=cfn-workshop&templateURL=https://s3-us-west-2.amazonaws.com/immersionday.hubertcheung.com/createVPC.yml)  -->
 
+Once you click the button above, you should be taken to the AWS CloudFormation console. Keep clicking **Next** until your stack starts creating.
+
+![CFN 1](images/cfn-1.png)
+![CFN final](images/cfn-5.png)
+
+Eventually, you'll see 2 stacks and a **CREATE_COMPLETE**:
+
+![CFN COMPLETE](images/cfn-complete.png)
 
 
 
@@ -44,20 +52,20 @@ On the bottom, you will see a bash shell (Yellow). For the remainder of the lab,
 There are a number of files and startup scripts we have pre-created for you. They're all in the main repo that you're using, so we'll clone that locally. Run this:
 
 <pre>
-$ git clone https://github.com/hub714/ec2-vpc-s3-lab.git
+$ git clone https://github.com/hub714/aws-simple-lab.git
 </pre>
 
 2\. Configure the AWS Command Line Interface (CLI)
 
-As we'll be using the AWS CLI for this lab, let's configure it first. Cloud9 will automatically configure credentials for you, so what we're looking to do is configure the region.
+As we'll be using the AWS CLI for this lab, let's configure it first. Cloud9 will automatically configure credentials for you, so what we're looking to do is verify the region.
 
 <pre>
-$ aws configure list
+TeamRole:~/environment $ aws configure list
       Name                    Value             Type    Location
       ----                    -----             ----    --------
    profile                <not set>             None    None
-access_key     ****************ABCD shared-credentials-file
-secret_key     ****************HffI shared-credentials-file
+access_key     ****************O5ON shared-credentials-file    
+secret_key     ****************ND+k shared-credentials-file    
     region                us-east-1      config-file    ~/.aws/config
 </pre>
 
@@ -72,11 +80,22 @@ $ aws ec2 describe-instances
 You should see something like this:
 
 <pre>
-$ aws ec2 describe-instances
+TeamRole:~/environment $ aws ec2 describe-instances
 {
-    "Reservations": []
+    "Reservations": [
+        {
+            "Instances": [
+                {
+                    
+...
+                }
+            ]
+        }
+    ]   
 }
 </pre>
+
+If not, raise your hand.
 
 ### Let's begin!
 

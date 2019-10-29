@@ -10,8 +10,10 @@ The first thing we'll do is try to launch an EC2 instance into one of the public
 As we'll be using the AWS CLI for this lab, let's configure it first. Cloud9 will automatically configure credentials for you, so what we're looking to do is configure the region.
 
 <pre>
-$ aws configure
+$ aws configure list
 </pre>
+
+Ensure your output looks like the output above. The region should say **us-east-1**. If it doesn't, call one of the instructors over.
 
 Don't change anything and hit enter 2 times until you see **Default region name [eu-west-1]**. Ensure it says eu-west-1. If it doesn't, type in **eu-west-1**. Hit enter 2 more times. In the end, your console should look like this:
 
